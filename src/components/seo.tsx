@@ -18,7 +18,7 @@ const Seo: React.FC<Props> = ({ description = '', lang = 'fi', meta = [], title 
           siteMetadata {
             title
             description
-            author5
+            author
           }
         }
       }
