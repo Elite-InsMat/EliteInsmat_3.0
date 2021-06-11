@@ -5,23 +5,18 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
+import '../styles/index.css';
+
 const IndexPage = (): JSX.Element => (
   <Layout>
     <Seo title="Home" />
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={['auto', 'webp', 'avif']}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: '1.45rem' }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to `&quot;`Using TypeScript`&quot;`</Link>
-    </p>
+    <div className="Home">
+      <header>
+        <h1>Elite InsMat</h1>
+        <h2>meemihtävä opiskelijaporukka Turun yliopistosta ::D</h2>
+        <h3>insmatit on muuten läpi :)</h3>
+      </header>
+    </div>
   </Layout>
 );
 

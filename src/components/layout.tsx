@@ -8,7 +8,6 @@
 import React, { FC, ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
 import './layout.css';
 import Footer from '../components/footer/footer';
 import Navbar from '../components/navbar/navbar';
@@ -27,14 +26,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0 1.0875rem 1.45rem',
-        }}
-      >
+      <div>
         <main>{children}</main>
         <Footer />
       </div>
