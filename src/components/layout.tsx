@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import './layout.css';
 import Footer from '../components/footer/footer';
+import Navbar from '../components/navbar/navbar';
 
 const Layout: FC<Props> = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const Layout: FC<Props> = ({ children }) => {
 
   return (
     <>
+      <Navbar />
       <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
       <div
         style={{
