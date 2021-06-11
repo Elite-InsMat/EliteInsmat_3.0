@@ -10,7 +10,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Seo: React.FC<Props> = ({ description = '', lang='fi', meta = [], title }) => {
+const Seo: React.FC<Props> = ({ description = '', lang = 'fi', meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,7 +18,7 @@ const Seo: React.FC<Props> = ({ description = '', lang='fi', meta = [], title })
           siteMetadata {
             title
             description
-            author
+            author5
           }
         }
       }
