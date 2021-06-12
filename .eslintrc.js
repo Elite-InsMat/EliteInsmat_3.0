@@ -39,7 +39,7 @@ module.exports = {
 			'error',
 			'always'
 		],
-		'prettier/prettier': [
+		/*'prettier/prettier': [
 			'error',
 			{
 			  'trailingComma': "es5",
@@ -47,7 +47,7 @@ module.exports = {
 			  'singleQuote': true,
 			  'printWidth': 120,
 			},
-		],
+		],*/
 		'react/prop-types': 0
 	}
 };

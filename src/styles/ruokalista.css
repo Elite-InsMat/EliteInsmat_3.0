@@ -1,0 +1,82 @@
+.FoodMenu {
+    min-height: 100vh;
+    padding: 15vh 0 0;
+    background: var(--discordcolor);
+
+    color: #cccccc;
+}
+
+.food-menu {
+    max-width: 1400px;
+    height: 100%;
+
+    margin: auto;
+    padding: 20px;
+
+    background: #282a2e;
+
+    border-radius: 2em 2em 0 0;
+    box-shadow: 0px 0px 5px var(--black);
+}
+
+.food-menu h1 {
+    color: #fff;
+    border-bottom: 1px solid #77282d;
+}
+
+.food-menu h3 {
+    color: #c7636a;
+}
+
+.menus {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menus > div {
+    margin: 40px;
+}
+
+.loader {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.loader span {
+    animation: load 3s ease infinite alternate;
+}
+
+.loader span:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+.loader span:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+.loader span:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.loader span:nth-child(6) {
+    animation-delay: 2.4s;
+}
+
+.loader span:nth-child(7) {
+    animation-delay: 2.8s;
+}
+
+@keyframes load {
+    from { font-size: 1.5em; }
+    to { font-size: 2em; }
+}
