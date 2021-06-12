@@ -34,7 +34,7 @@ const Navbar = (): JSX.Element => {
           <Link to="/galleria">Galleria</Link>
         </li>
         <li onClick={showMenu}>
-          <Link to="/kalenteri">Tapahtumakalenteri</Link>
+          <Link to="/eventscalendar">Tapahtumakalenteri</Link>
         </li>
         <li onClick={showMenu}>
           <Link to="/channels">Kanavat</Link>

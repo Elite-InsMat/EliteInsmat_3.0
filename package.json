@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Juhana Kuparinen",
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@ericz1803/react-google-calendar": "^4.2.0",
     "axios": "^0.21.1",
     "gatsby": "^3.7.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
