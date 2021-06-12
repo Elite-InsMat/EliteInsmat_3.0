@@ -1,0 +1,188 @@
+body {
+    background: #2e3136;
+}
+
+.main-div {
+    background: #2e3136;
+    margin: 100px 0 0 0;
+    height: 100%;
+}
+
+.headers {
+    background: #2A2D32;
+    box-shadow: 0 0 5px 2px #0000007c; /*#483d8b*/
+    margin: 110px auto 0;
+    padding: 0 0 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link-contents {
+    background:  #0D160B url('../images/channels/keyboard.jpg') no-repeat; /*44344F, A799B7*/
+    background-size: cover;
+    box-shadow: 0 0 25px 2px #000000; /*#483d8b*/
+    margin: 30px auto auto auto;
+    padding: 70px;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.link-contents a{
+    text-decoration: none;
+}
+
+.header1 {
+    color: #ff6347;
+    text-shadow: 3px 3px #000000;
+    margin: -20px 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /*font-family: 'Poppins', sans-serif;*/
+    font-size: 100px;
+    z-index: 100;
+}
+
+.header2 {
+    color: #ff6347;
+    text-shadow: 3px 3px #000000; /*#ee82ee*/
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.mobiili {
+    color: #2A2D32;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+.link-div {
+    background: #1e1d24;
+    box-shadow: 0 0 15px 7px #000000;
+    margin: 0 auto 25px;
+    width: 600px;
+    height: 100px;
+    border-radius: 100px;
+    transition: transform .2s;
+}
+
+.link-div:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.link {
+    color: #4E53A5; /*#1e3683*/
+    text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px #000; 
+    /*margin: 100px auto auto 213px;*/
+    margin-top: -70px;
+    margin-left: 110px;
+    text-decoration: none;
+    font-family: fantasy;
+    font-size: 80px;
+}
+
+.hub-special {
+    color: #0e110a;
+    text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px #ffd700; 
+}
+
+.fenkoli-special {
+    color: #0D0F0A;
+    text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px #1eb81e; 
+}
+
+.link-image {
+    box-shadow: 0 0 10px 1px black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-content: center;
+    position: absolute;
+}
+
+.img-spin-discord {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.img-spin-steam {
+    animation-name: spin;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.img-spin-rommi {
+    animation-name: spin;
+    animation-duration: 6000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.img-spin-hub {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.img-spin-fenkoli {
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.secret-code {
+    background: #232529;
+    box-shadow: 0 0 10px 1px #0000008a;
+    margin: 25px auto 25px;
+    padding: 1px 0 10px 0;
+    column-gap: 100px;
+    width: 250px;
+    text-align: center;
+}
+
+.secret-form{
+    margin: auto;
+}
+
+.forms-p {
+    color: #ff6347;
+    text-shadow: 2px 2px #000000; /*#ee82ee*/
+    font-family: fantasy;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .mobiili {
+        color: #ff0000;
+        text-shadow: 1px 1px #000000; /*#ee82ee*/
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+    }
+}

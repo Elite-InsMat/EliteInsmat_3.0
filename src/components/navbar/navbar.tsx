@@ -37,7 +37,7 @@ const Navbar = (): JSX.Element => {
           <Link to="/kalenteri">Tapahtumakalenteri</Link>
         </li>
         <li onClick={showMenu}>
-          <Link to="/kanavat">Kanavat</Link>
+          <Link to="/channels">Kanavat</Link>
         </li>
         <li onClick={showMenu}>
           <Link to="/ruokalista">Ruokalista</Link>
