@@ -8,7 +8,7 @@ import './navbar.css';
 //custom attribute selector for navbar
 declare module 'react' {
   interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    growDown?: number;
+    growdown?: number;
   }
 }
 
@@ -22,7 +22,7 @@ const Navbar = (): JSX.Element => {
   };
 
   return (
-    <nav className="Navbar" growDown={growDown}>
+    <nav className="Navbar" growdown={growDown}>
       <ul className="List">
         <li onClick={showMenu}>
           <Link to="/">Etusivu</Link>
@@ -37,7 +37,7 @@ const Navbar = (): JSX.Element => {
           <Link to="/kalenteri">Tapahtumakalenteri</Link>
         </li>
         <li onClick={showMenu}>
-          <Link to="/kanavat">Kanavat</Link>
+          <Link to="/channels">Kanavat</Link>
         </li>
         <li onClick={showMenu}>
           <Link to="/ruokalista">Ruokalista</Link>

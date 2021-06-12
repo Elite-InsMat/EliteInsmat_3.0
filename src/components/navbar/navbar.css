@@ -61,7 +61,7 @@
     font-size: 1.2em;
 }
 
-@keyframes growDown {
+@keyframes growdown {
     0% {
         height: var(--nav-height);
     }
@@ -81,8 +81,8 @@
         overflow: hidden;
     }
 
-    .Navbar[growDown='0'] {
-        animation: growDown 500ms ease-in-out forwards;
+    .Navbar[growdown='0'] {
+        animation: growdown 500ms ease-in-out forwards;
     }
 
     
