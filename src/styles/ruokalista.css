@@ -1,0 +1,38 @@
+.FoodMenu {
+    height: 100%;
+    padding: 15vh 0 0;
+    background: var(--discordcolor);
+
+    color: #cccccc;
+}
+
+.food-menu {
+    max-width: 1400px;
+    height: 100%;
+
+    margin: auto;
+    padding: 20px;
+
+    background: #282a2e;
+
+    border-radius: 2em 2em 0 0;
+    box-shadow: 0px 0px 5px var(--black);
+}
+
+.food-menu h1 {
+    color: #fff;
+    border-bottom: 1px solid #77282d;
+}
+
+.food-menu h3 {
+    color: #c7636a;
+}
+
+.menus {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menus > div {
+    margin: 40px;
+}
