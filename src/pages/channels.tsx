@@ -28,7 +28,6 @@ const Channels = (): JSX.Element => {
     }
   `);
 
-  console.log(pageQuery);
   return (
     <Layout>
       <Seo title="Kanavat" />
