@@ -1,8 +1,10 @@
 import React from 'react';
 
 import Calendar from '@ericz1803/react-google-calendar';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
-import './CalendarC.css';
+import '@styles/eventscalendar.css';
 
 const API_KEY = 'AIzaSyDNijd3taUL19DeJui8Gg6zp2yDYkl3Q7M';
 
@@ -23,9 +25,10 @@ const styles = {
 
 const CalendarC = (): JSX.Element => {
   return (
-    <div>
+    <Layout>
+      <Seo title="Kalenteri" />
       <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
-    </div>
+    </Layout>
   );
 };
 

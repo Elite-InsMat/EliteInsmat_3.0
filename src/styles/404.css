@@ -1,0 +1,11 @@
+.FOF {
+    min-height: 100vh;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    background: var(--darkgreyfour);
+}
+
+.FOF h1 {
+    padding: 20% 0 0;
+}

@@ -1,0 +1,22 @@
+.calendar {
+    margin: 10vh 0 0 0;
+    background: #7d8aff;
+    color: #FF0000;
+
+}
+
+.day {
+    color: #ff6347;
+    background: #3d3b3b;
+    font-weight: bold;
+}
+
+.event {
+    background: #7d8aff;
+}
+
+.today { /*TÄÄ PASKA EI JOSTAIN VITUN SYYSTÄ TOIMI, KS. CalendarC.js*/
+    border: 10px solid #0000FF;
+}
+
+

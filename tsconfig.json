@@ -16,5 +16,23 @@
       "noEmit": true,
       "skipLibCheck": true,
       "moduleResolution": "node",
+      "baseUrl": "src/",
+      "paths": {
+        "@components/*": [
+          "components/*"
+        ],
+        "@images/*": [
+          "images/*"
+        ],
+        "@pages/*": [
+          "pages/*"
+        ],
+        "@styles/*": [
+          "styles/*"
+        ],
+        "@type/*": [
+          "types/*"
+        ] // @types would clash with dev dependencies
+      }
     }
 }
