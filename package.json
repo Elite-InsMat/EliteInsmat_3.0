@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Juhana Kuparinen",
   "dependencies": {
+    "@ericz1803/react-google-calendar": "^4.2.0",
     "gatsby": "^3.7.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
     "gatsby-plugin-image": "^1.4.0",
