@@ -7,12 +7,12 @@ const HiddenComponent = ({ images }: Props): JSX.Element => {
       <LinkButton
         link="https://eliteinsmat.fi/elitehub"
         name="EliteHub"
-        image={images.edges[3].node.childImageSharp.gatsbyImageData}
+        image={images.edges[2].node.childImageSharp.gatsbyImageData}
       />
       <LinkButton
         link="https://eliteinsmat.fi/fenkoli"
         name="Fenkoli"
-        image={images.edges[2].node.childImageSharp.gatsbyImageData}
+        image={images.edges[3].node.childImageSharp.gatsbyImageData}
       />
     </>
   );
