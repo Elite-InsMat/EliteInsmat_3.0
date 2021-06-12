@@ -27,6 +27,7 @@ const Channels = (): JSX.Element => {
       }
     }
   `);
+
   console.log(pageQuery);
   return (
     <Layout>
@@ -54,10 +55,10 @@ const Channels = (): JSX.Element => {
               name="ROMMI.ORG"
               image={pageQuery.allFile.edges[4].node.childImageSharp.gatsbyImageData}
             />
-            {isHidden ? null : <HiddenComponent images={pageQuery.allFile} />} {/*null*/}
+            {isHidden ? null : <HiddenComponent images={pageQuery.allFile.edges} />} {/*null*/}
           </div>
           <div className="secret-code">
-            <CodeForm name="secret-code-form" setIsHidden={setIsHidden} />
+            <CodeForm setIsHidden={setIsHidden} />
           </div>
         </div>
       </div>

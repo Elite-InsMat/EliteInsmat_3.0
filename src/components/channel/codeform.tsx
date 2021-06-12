@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CodeForm = ({ name, setIsHidden }: Props): JSX.Element => {
+const CodeForm = ({ setIsHidden }: Props): JSX.Element => {
   const [code, setCode] = useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -24,7 +24,6 @@ const CodeForm = ({ name, setIsHidden }: Props): JSX.Element => {
 };
 
 type Props = {
-  name: string;
   setIsHidden: React.Dispatch<boolean>;
 };
 
