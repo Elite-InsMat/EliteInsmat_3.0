@@ -26,58 +26,63 @@ const FoodMenu = (): JSX.Element => {
     fetchData(1920);
   }, []);
 
-  if (!menu) {
-    return (
-      <div className="FoodMenu">
-        <h1>Tälle päivälle ei valitettasti ole ruokalistaa! :(</h1>
+  const loader = () => (
+    <div className="FoodMenu">
+      <div className="loader">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
       </div>
-    );
-  }
+    </div>
+  );
 
-  if (menu?.ErrorText) {
-    return (
-      <div className="FoodMenu">
-        <h1>Tälle päivälle ei valitettasti ole ruokalistaa! :(</h1>
+  const foodMenu = (menu: ApiResponse) => (
+    <div className="food-menu">
+      <h1 key={menu.RestaurantName}>{menu.RestaurantName}</h1>
+      <div className="menus">
+        {!menu
+          ? null
+          : menu.MenusForDays.map(mfd => {
+            return (
+              <div key={mfd.Date}>
+                <hgroup>
+                  <h2>{new Date(mfd.Date.split('T')[0]).toLocaleDateString()}</h2>
+                  <p>{mfd.LunchTime}</p>
+                </hgroup>
+                {mfd.SetMenus.map(st => {
+                  return (
+                    <div key={st.Name}>
+                      <hgroup>
+                        <h3>{st.Name}</h3>
+                        <p>{st.Price}</p>
+                      </hgroup>
+                      <ul>
+                        {st.Components.map(c => (
+                          <li key={c}>{c}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
       </div>
-    );
-  }
+    </div>
+  );
 
   return (
     <Layout>
       <Seo title='ruokalista'/>
       <div className="FoodMenu">
-        <div className="food-menu">
-          <h1 key={menu.RestaurantName}>{menu.RestaurantName}</h1>
-          <div className="menus">
-            {!menu
-              ? null
-              : menu.MenusForDays.map(mfd => {
-                return (
-                  <div key={mfd.Date}>
-                    <hgroup>
-                      <h2>{new Date(mfd.Date.split('T')[0]).toLocaleDateString()}</h2>
-                      <p>{mfd.LunchTime}</p>
-                    </hgroup>
-                    {mfd.SetMenus.map(st => {
-                      return (
-                        <div key={st.Name}>
-                          <hgroup>
-                            <h3>{st.Name}</h3>
-                            <p>{st.Price}</p>
-                          </hgroup>
-                          <ul>
-                            {st.Components.map(c => (
-                              <li key={c}>{c}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+        {!menu ? loader() : 
+          (menu?.ErrorText ? 
+            <h1>Tälle päivälle ei valitettasti ole ruokalistaa! : 
+              (</h1> : foodMenu(menu))}
       </div>
     </Layout>
   );
