@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import Layout from '@components/layout';
+import Seo from '@components/seo';
+import Menu from '@components/foodMenu';
+import Loader from '@components/loader';
+
+import { ApiResponse } from '@type/menu';
 
 import '../styles/ruokalista.css';
 
@@ -26,88 +30,17 @@ const FoodMenu = (): JSX.Element => {
     fetchData(1920);
   }, []);
 
-  const loader = () => (
-    <div className="FoodMenu">
-      <div className="loader">
-        <span>L</span>
-        <span>O</span>
-        <span>A</span>
-        <span>D</span>
-        <span>I</span>
-        <span>N</span>
-        <span>G</span>
-      </div>
-    </div>
-  );
-
-  const foodMenu = (menu: ApiResponse) => (
-    <div className="food-menu">
-      <h1 key={menu.RestaurantName}>{menu.RestaurantName}</h1>
-      <div className="menus">
-        {!menu
-          ? null
-          : menu.MenusForDays.map(mfd => {
-            return (
-              <div key={mfd.Date}>
-                <hgroup>
-                  <h2>{new Date(mfd.Date.split('T')[0]).toLocaleDateString()}</h2>
-                  <p>{mfd.LunchTime}</p>
-                </hgroup>
-                {mfd.SetMenus.map(st => {
-                  return (
-                    <div key={st.Name}>
-                      <hgroup>
-                        <h3>{st.Name}</h3>
-                        <p>{st.Price}</p>
-                      </hgroup>
-                      <ul>
-                        {st.Components.map(c => (
-                          <li key={c}>{c}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-      </div>
-    </div>
-  );
-
   return (
     <Layout>
       <Seo title='ruokalista'/>
       <div className="FoodMenu">
-        {!menu ? loader() : 
+        {!menu ? <Loader /> : 
           (menu?.ErrorText ? 
             <h1>Tälle päivälle ei valitettasti ole ruokalistaa! : 
-              (</h1> : foodMenu(menu))}
+              (</h1> : <Menu menu={menu} />)}
       </div>
     </Layout>
   );
-};
-
-type ApiResponse = {
-  ErrorText: string | null;
-  Footer: string;
-  MenusForDays: Menu[];
-  PriceHeader: unknown;
-  RestaurantName: string;
-  RestaurantUrl: string;
-};
-
-type Menu = {
-  Date: string;
-  LunchTime: string;
-  SetMenus: MenuItem[];
-};
-
-type MenuItem = {
-  Components: string[];
-  Name: string;
-  Price: string;
-  SortOrder: number;
 };
 
 export default FoodMenu;
