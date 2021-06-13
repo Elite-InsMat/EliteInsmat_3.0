@@ -36,7 +36,6 @@ const Channels = (): JSX.Element => {
           <div className="headers">
             <h1 className="header1">KANAVAT</h1>
             <h2 className="header2">Täältä löydät EliteInsmat kanavat</h2>
-            <p className="mobiili">Your software is out of date so the site may behave incorrectly!</p>
           </div>
           <div className="link-contents">
             <LinkButton

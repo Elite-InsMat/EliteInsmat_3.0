@@ -53,20 +53,11 @@ body {
     font-size: 50px;
 }
 
-.mobiili {
-    color: #2A2D32;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-}
-
 .link-div {
     background: #1e1d24;
     box-shadow: 0 0 15px 7px #000000;
     margin: 0 auto 25px;
-    width: 600px;
+    width: 70%; /*600px*/
     height: 100px;
     border-radius: 100px;
     transition: transform .2s;
@@ -84,8 +75,8 @@ body {
     margin-top: -70px;
     margin-left: 110px;
     text-decoration: none;
-    font-family: fantasy;
-    font-size: 80px;
+    font-family: serif;
+    font-size: 5vw;
 }
 
 .hub-special {
@@ -163,7 +154,7 @@ body {
 .forms-p {
     color: #ff6347;
     text-shadow: 2px 2px #000000; /*#ee82ee*/
-    font-family: fantasy;
+    font-family: serif;
 }
 
 @keyframes spin {
@@ -176,13 +167,31 @@ body {
 }
 
 @media only screen and (max-width: 770px){
-    .mobiili {
-        color: #ff0000;
-        text-shadow: 1px 1px #000000; /*#ee82ee*/
-        margin: auto;
-        width: 100%;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 15px;
+    .header1{
+        font-size: 9vw;
+    }
+    .header2{
+        font-size: 7vw;
+    }
+    .link-div {
+        width: 100%; /*600px*/
+        height: 100px;
+        border-radius: 100px;
+        transition: transform .2s;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .link{
+        display: none;
+    }
+    .link-image{
+        margin-left: -50px;
+    }
+    .link-div {
+        width: 0; /*600px*/
+        height: 100px;
+        border-radius: 100px;
+        transition: transform .2s;
     }
 }
