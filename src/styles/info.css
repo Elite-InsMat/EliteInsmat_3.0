@@ -11,7 +11,7 @@
     background: var(--discordcolortwo) no-repeat;
     background-size: cover;
     max-width: 1150px;
-    height: 100vh;
+    min-height: 1080px;
     margin: 30px auto 0;
     border-bottom: none;
     border-radius: 15px 15px 0 0;
