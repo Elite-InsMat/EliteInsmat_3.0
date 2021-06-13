@@ -1,3 +1,7 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3febd63-9343-4739-aeab-4119d6215309/deploy-status)](https://app.netlify.com/sites/stupefied-davinci-a52454/deploys)
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
