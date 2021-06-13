@@ -34,10 +34,10 @@ const Navbar = (): JSX.Element => {
           <Link to="/galleria">Galleria</Link>
         </li>
         <li onClick={showMenu}>
-          <Link to="/eventscalendar">Tapahtumakalenteri</Link>
+          <Link to="/kalenteri">Tapahtumakalenteri</Link>
         </li>
         <li onClick={showMenu}>
-          <Link to="/channels">Kanavat</Link>
+          <Link to="/kanavat">Kanavat</Link>
         </li>
         <li onClick={showMenu}>
           <Link to="/ruokalista">Ruokalista</Link>
