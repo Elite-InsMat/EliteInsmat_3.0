@@ -15,8 +15,6 @@ const IndexPage = (): JSX.Element => {
     }
   `);
 
-  console.log(result);
-
   return(
     <Layout>
       <Seo title="Home" />
