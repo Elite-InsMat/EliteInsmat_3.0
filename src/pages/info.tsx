@@ -23,7 +23,7 @@ const Info = (): JSX.Element => {
             </article>
           </section>
           <section>
-            <h2>Porukkamme historia</h2>
+            <h3>Porukkamme historia</h3>
             <article>
               <p>
                   Alkuperäisten jäsenten fuksivuoden syksynä, 2019, keksittiin, että vaikeita insinöörimatematiikan demoja
