@@ -9,50 +9,6 @@
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
-//const { createFilePath } = require('gatsby-source-filesystem');
-
-/*exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  console.log(`Node created of type "${node.internal.type}"`);
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
-
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    });
-  }
-};*/
-
-/*exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/blog-post.js'),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    });
-  });
-};*/
 
 /**
  * Query all files in a given directory and its subdirectories
@@ -61,7 +17,7 @@ const path = require('path');
 async function getFileNames(graphql) {
   const files = await graphql(`
     query {
-      allFile(filter: { relativeDirectory: { glob: "gallery/**" } }) {
+      allFile(filter: { relativeDirectory: { glob: "galleria/**" } }) {
         edges {
           node {
             relativeDirectory
@@ -89,7 +45,7 @@ async function getFileNames(graphql) {
 async function getAlbums(graphql) {
   const directories = await graphql(`
     query {
-      allFile(filter: { relativeDirectory: { glob: "gallery/*" } }) {
+      allFile(filter: { relativeDirectory: { glob: "galleria/*" } }) {
         edges {
           node {
             relativeDirectory
@@ -114,38 +70,62 @@ async function getAlbums(graphql) {
   return Array.from(new Set(directories));
 }
 
+async function getAlbumPhotos(graphql, dir) {
+  const files = await graphql(`
+    query {
+      allFile(filter: { relativeDirectory: { glob: "${dir}/**" } }) {
+        edges {
+          node {
+            relativeDirectory
+            relativePath
+            publicURL
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors;
+    }
+    return result;
+  });
+
+  console.log(files);
+
+  return files.data.allFile.edges;
+}
+
 exports.createPages = async ({ graphql, actions }) => {
-  //const ListTemplate = path.resolve('./src/templates/list.js');
+
+  const GalleryTemplate = path.resolve('./src/components/templates/gallery.tsx');
   const AlbumTemplate = path.resolve('./src/components/templates/album.tsx');
 
-  // get all files
-  // { publicUrl, relativeDirectory }
   const files = await getFileNames(graphql);
-  //const paths = files.map(f => f.node.relativePath);
   const albums = await getAlbums(graphql);
 
-  //const miniatures = await getMiniatures(graphql, paths, albums);
-  //const fullSized = await getFullSizedImages(graphql, paths, albums);
-
-  /*actions.createPage({
-    path: '/',
-    component: ListTemplate,
+  //creating the gallery page
+  actions.createPage({
+    path: '/galleria',
+    component: GalleryTemplate,
     context: {
       albums: albums,
-      allPhotos: files,
+      photos: files,
     },
-  });*/
+  });
 
-  albums.forEach(album => {
-    console.log(album + ' yay');
+  //creating a page for each album
+  albums.forEach(async album => {
+    const photos = await getAlbumPhotos(graphql, album);
+
     actions.createPage({
       path: album,
       component: AlbumTemplate,
       context: {
         name: album,
-        photos: files,
+        photos
       },
     });
+
   });
 };
 

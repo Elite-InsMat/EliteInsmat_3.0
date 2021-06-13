@@ -11,28 +11,14 @@ import '@styles/album.css';
  * Used in gatsby-node.js for generating our albums
  * @returns {JSX.Element}
  */
-const Album = ({ pageContext }: Props): JSX.Element => {
+const Gallery = ({ pageContext }: Props): JSX.Element => {
   const [image, setImage] = useState('');
 
   return(
     <Layout>
       <Seo title='...'/>
-      <div className='Album'>
-        <Link to='/galleria'><span>&#10094;</span></Link>
-        <h1>{pageContext.name}</h1>
-        {image ? <ImageOverlay image={image} setImage={setImage} /> : null}
-        <div className='photos'>
-          {pageContext.photos.map((node, i) => {
-            return(
-              <img 
-                key={i} 
-                className='photo'
-                src={node.node.publicURL}
-                onClick={() => setImage(node.node.publicURL)}
-              />
-            );
-          })}
-        </div>
+      <div className='Gallery'>
+          HEI
       </div>
     </Layout>
   );
@@ -53,4 +39,4 @@ type Node = {
   }
 }
 
-export default Album;
+export default Gallery;
