@@ -19,7 +19,7 @@ const Album = ({ pageContext }: Props): JSX.Element => {
       <Seo title='...'/>
       <div className='Album'>
         <Link to='/galleria'><span>&#10094;</span></Link>
-        <h1>{pageContext.name}</h1>
+        <h1>{pageContext.name.substring(9, pageContext.name.length)}</h1>
         {image ? <ImageOverlay image={image} setImage={setImage} /> : null}
         <div className='photos'>
           {pageContext.photos.map((node, i) => {
