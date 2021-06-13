@@ -6,23 +6,12 @@
  */
 
 import React, { FC, ReactNode } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
 import './layout.css';
 import Footer from '../components/footer/footer';
 import Navbar from '../components/navbar/navbar';
 
 const Layout: FC<Props> = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <>
       <Navbar />
