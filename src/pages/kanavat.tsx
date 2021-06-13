@@ -35,7 +35,7 @@ const Channels = (): JSX.Element => {
         <div className="content-div">
           <div className="headers">
             <h1 className="header1">KANAVAT</h1>
-            <h2 className="header2">Täältä löydät EliteInsmat kanavat</h2>
+            <h2 className="header2">Täältä löydät Elite Insmat -kanavat</h2>
           </div>
           <div className="link-contents">
             <LinkButton
