@@ -15,7 +15,6 @@ const Gallery = ({pageContext} : Props): JSX.Element => {
       <Seo title='...'/>
       <div className='gallery'>
         {pageContext.albums.map((album : string) =>{ 
-          console.log(pageContext.photos[0].node);
           const albumName = album.substring(9,album.length);
           const image = pageContext.photos.find((n) => n.node.relativeDirectory === album && n.node.relativePath.includes('cover'));
           return(
