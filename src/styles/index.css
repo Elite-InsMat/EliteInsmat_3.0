@@ -20,7 +20,7 @@
     background: #404040 url('../images/mokki1.jpg') no-repeat fixed;
     background-size: cover;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--tomato);
     overflow: hidden;
 }
@@ -29,9 +29,12 @@
     text-shadow: 3px 3px 6px var(--black); 
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 10px;
+
     background: rgba(0,0,0,.6);
     -moz-animation: fadeInBackground 1s ease-int both;
     -webkit-animation: fadeInBackground 1s ease-in both;

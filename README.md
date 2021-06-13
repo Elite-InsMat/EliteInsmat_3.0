@@ -29,3 +29,5 @@ Uudet react komponentit aina funktionaalisina komponentteina (ellei painavaa syy
 ### Galleria, albumit ja kuvat
 
 Jos haluat lisätä galleriaan uuden albumin, luo haluamasi niminen kansio src/images/galleria ja laita siihen kaikki albumiin haluamasi kuvat. Jos haluat lisätä kuvia albumiin, etsi albumin nimi src/images/galleria kansiosta ja lisää hakemistoon kuvat. Kun olet puskenut muutoksesi, uudet kuvat ja albumit pitäisivät näkyä sivulla, sen jälkeen kun sivu on rakentunut Netlifyissä!
+
+HUOM! Jokaisen albumin kansiossa on oltava **cover** niminen kuvatiedosto, josta tehdään albumille galleriasivulla näkyvä kuva!
