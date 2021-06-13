@@ -6,7 +6,7 @@ Toteutettu yrityksen hackathonissa 11.6-13.6.2021!
 
 ## Devaus
 
-Tarvitset Node.js:n koneellesi, mieluiten v14.0.0 ja uudempi!
+Tarvitset Node.js:n koneellesi, mieluiten v14.0.0 ja uudempi! Asenna myös gatsby komennolla `npm i -g gatsby-cl`.
 
 ### npm i
 
