@@ -33,33 +33,33 @@
     height: 100vh;
     margin: auto;
     background: rgba(0,0,0,.6);
-    -moz-animation: fadeInBackground 1.5s ease-int both;
-    -webkit-animation: fadeInBackground 1.5s ease-in both;
-    -ms-animation: fadeInBackground 1.5s ease-in both; 
-    -o-animation: fadeInBackground 1.5s ease-in both; 
-    animation: fadeInBackground 1.5s ease-in both;
+    -moz-animation: fadeInBackground 1s ease-int both;
+    -webkit-animation: fadeInBackground 1s ease-in both;
+    -ms-animation: fadeInBackground 1s ease-in both; 
+    -o-animation: fadeInBackground 1s ease-in both; 
+    animation: fadeInBackground 1s ease-in both;
 }
 
 .Home > header h1 {
     padding: 25vh 0 0;
     font-size: 4em;
     font-family: 'Poppins', sans-serif;
-    -moz-animation: fadeInHeader1 1.5s ease-int both;
-    -webkit-animation: fadeInHeader1 1.5s ease-in both;
-    -ms-animation: fadeInHeader1 1.5s ease-in both; 
-    -o-animation: fadeInHeader1 1.5s ease-in both; 
-    animation: fadeInHeader1 1.5s ease-in both;
+    -moz-animation: fadeInHeader1 1s ease-int both;
+    -webkit-animation: fadeInHeader1 1s ease-in both;
+    -ms-animation: fadeInHeader1 1s ease-in both; 
+    -o-animation: fadeInHeader1 1s ease-in both; 
+    animation: fadeInHeader1 1s ease-in both;
 
 }
 .Home > header h2 {
     padding: 3vh 0 0;
     font-size: 1.3em;
     font-family: 'Poppins', sans-serif;
-    -moz-animation: fadeInHeader2 1.5s ease-int both;
-    -webkit-animation: fadeInHeader2 1.5s ease-in both;
-    -ms-animation: fadeInHeader2 1.5s ease-in both; 
-    -o-animation: fadeInHeader2 1.5s ease-in both; 
-    animation: fadeInHeader2 1.5s ease-in both;
+    -moz-animation: fadeInHeader2 1s ease-int both;
+    -webkit-animation: fadeInHeader2 1s ease-in both;
+    -ms-animation: fadeInHeader2 1s ease-in both; 
+    -o-animation: fadeInHeader2 1s ease-in both; 
+    animation: fadeInHeader2 1s ease-in both;
 
 }
 .Home > header h3 {
@@ -67,11 +67,11 @@
     font-size: .6em;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    -moz-animation: fadeInHeader3 1.5s ease-int both;
-    -webkit-animation: fadeInHeader3 1.5s ease-in both;
-    -ms-animation: fadeInHeader3 1.5s ease-in both; 
-    -o-animation: fadeInHeader3 1.5s ease-in both; 
-    animation: fadeInHeader3 1.5s ease-in both;
+    -moz-animation: fadeInHeader3 1s ease-int both;
+    -webkit-animation: fadeInHeader3 1s ease-in both;
+    -ms-animation: fadeInHeader3 1s ease-in both; 
+    -o-animation: fadeInHeader3 1s ease-in both; 
+    animation: fadeInHeader3 1s ease-in both;
 
 }
 
