@@ -149,6 +149,11 @@ body {
 
 .secret-form{
     margin: auto;
+    font-size: 1em;
+
+}
+.secret-form input{
+    width: 79%;
 }
 
 .forms-p {
@@ -179,9 +184,13 @@ body {
         border-radius: 100px;
         transition: transform .2s;
     }
+    .link {
+
+        font-size: 4.1vh;
+    }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
     .link{
         display: none;
     }
