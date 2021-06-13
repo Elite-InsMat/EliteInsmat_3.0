@@ -36,8 +36,9 @@ const FoodMenu = (): JSX.Element => {
       <div className="FoodMenu">
         {!menu ? <Loader /> : 
           (menu?.ErrorText ? 
-            <h1>Tälle päivälle ei valitettasti ole ruokalistaa! : 
-              (</h1> : <Menu menu={menu} />)}
+            <h1>Tälle päivälle ei valitettasti ole ruokalistaa!</h1> :  
+            <Menu menu={menu} />
+          )}
       </div>
     </Layout>
   );
