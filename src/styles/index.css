@@ -63,7 +63,7 @@
 
 }
 .Home > header h3 {
-    padding: 35vh 0 0;
+    padding: 13vh 0 0;
     font-size: .6em;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
@@ -74,8 +74,6 @@
     animation: fadeInHeader3 1.5s ease-in both;
 
 }
-
-
 
 @keyframes fadeInHeader1 {
     from {
