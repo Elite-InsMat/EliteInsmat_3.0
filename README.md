@@ -25,3 +25,7 @@ luo tuotanto versio koodistatsi public -kansioon
 Tehdään aina oma branchi uusille ominaisuuksille, ei pusketa suoraan masteriin! Juhana/joku muu tekee jokaisesta featuresta aina code reviewing ennen kuin se mergataan! Muistakaa myös käyttää lintteriä ennen pull reguestia, jotta koodaustyylit pysyvät yhdenmukaisina!
 
 Uudet react komponentit aina funktionaalisina komponentteina (ellei painavaa syytä class pohjaiseen komponenttiin)!
+
+### Galleria, albumit ja kuvat
+
+Jos haluat lisätä galleriaan uuden albumin, luo haluamasi niminen kansio src/images/galleria ja laita siihen kaikki albumiin haluamasi kuvat. Jos haluat lisätä kuvia albumiin, etsi albumin nimi src/images/galleria kansiosta ja lisää hakemistoon kuvat. Kun olet puskenut muutoksesi, uudet kuvat ja albumit pitäisivät näkyä sivulla, sen jälkeen kun sivu on rakentunut Netlifyissä!
