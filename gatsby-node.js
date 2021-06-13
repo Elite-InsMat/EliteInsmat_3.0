@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+// Image queryin made with help of this: https://github.com/roddds/gallery/blob/master/gatsby-node.js
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
@@ -129,6 +129,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
+//enables custom paths with "paths" in tsconfig.json
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
