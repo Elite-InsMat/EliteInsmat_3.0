@@ -80,6 +80,38 @@
 @keyframes fadeInHeader1 {
     from {
         opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    } to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    
+}
+
+@-moz-keyframes fadeInHeader1 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    } to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes fadeInHeader1 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    } to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    
+}
+
+@-moz-keyframes fadeInHeader2 {
+    from {
+        opacity: 0;
         transform: translate3d(0, -25%, 0);
     } to {
         opacity: 1;
@@ -110,36 +142,6 @@
     
 }
 
-@keyframes fadeInBackground {
-    from {
-		opacity: 0.3;
-	} to {
-		opacity: 1;
-	}
-} 
-
-@-moz-keyframes fadeInHeader1 {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -25%, 0);
-    } to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-    
-}
-
-@-moz-keyframes fadeInHeader2 {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -25%, 0);
-    } to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-    
-}
-
 @-moz-keyframes fadeInHeader3 {
     from{
         opacity: 0;
@@ -151,23 +153,20 @@
     
 }
 
+@keyframes fadeInBackground {
+    from {
+		opacity: 0.3;
+	} to {
+		opacity: 1;
+	}
+} 
+
 @-moz-keyframes fadeInBackground {
     from {
 		opacity: 0.4;
 	} to {
 		opacity: 1;
 	}
-}
-
-@-webkit-keyframes fadeInHeader1 {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -25%, 0);
-    } to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-    
 }
 
 @-webkit-keyframes fadeInHeader2 {

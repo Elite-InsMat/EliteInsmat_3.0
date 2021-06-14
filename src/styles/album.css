@@ -55,7 +55,19 @@
 
 .albumCover a{
     text-decoration: none;
-    color: black;
+    color: #fff;
+}
+
+.albumCover img {
+    animation: fadeInAlbum 0.3s ease-in both;
+    transition: 0.5s ease-in-out;
+}
+
+.albumCover img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s ease-in-out;
 }
 
 /*

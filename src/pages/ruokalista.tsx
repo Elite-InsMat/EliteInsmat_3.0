@@ -20,7 +20,9 @@ const FoodMenu = (): JSX.Element => {
             `;
       try {
         const request = await axios.get<ApiResponse>(queryString);
-        if (!request || request.data.ErrorText) throw new Error('Could not fetch requested resource...');
+        if (!request) {
+          throw new Error('Could not fetch requested resource...');
+        }
         setMenu(request.data);
       } catch (err) {
         console.log('Could not fetch menu :(');

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '@components/layout';
 import Seo from '@components/seo';
@@ -19,10 +20,10 @@ const Gallery = ({pageContext} : Props): JSX.Element => {
           const image = pageContext.photos.find((n) => n.node.relativeDirectory === album && n.node.relativePath.includes('cover'));
           return(
             <div className="albumCover" key={album}>
-              <a href={album}>
+              <Link to={albumName}>
                 <h2>{albumName}</h2>
                 {image ? <img src={image.node.publicURL} /> : <h1></h1>}     
-              </a>
+              </Link>
             </div> 
           );
         })}
