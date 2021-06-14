@@ -1,6 +1,6 @@
 # Elite InsMat sivut 3.0!
 
-Toteutettu yrityksen hackathonissa 11.6-13.6.2021!
+Toteutettu yrityksen hackathonissa **11.6-13.6.2021!**
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e3febd63-9343-4739-aeab-4119d6215309/deploy-status)](https://app.netlify.com/sites/stupefied-davinci-a52454/deploys)
 
