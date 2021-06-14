@@ -13,7 +13,7 @@ import '@styles/album.css';
 const Gallery = ({pageContext} : Props): JSX.Element => {
   return(
     <Layout>
-      <Seo title='...'/>
+      <Seo title='Galleria'/>
       <div className='gallery'>
         {pageContext.albums.map((album : string) =>{ 
           const albumName = album.substring(9,album.length);
