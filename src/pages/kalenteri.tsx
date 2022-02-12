@@ -27,8 +27,7 @@ const CalendarC = (): JSX.Element => {
   return (
     <Layout>
       <Seo title="Kalenteri" />
-      <iframe src="https://calendar.google.com/calendar/embed?height=720&wkst=2&bgcolor=%23616161&ctz=Europe%2FHelsinki&title=Elite%20InsMat&src=czE5Z3VjbDRlNnQ2Nm5haTNnMzQ3MmdyOHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23616161" style="border:solid 1px #777" width="1080" height="720" frameborder="0" scrolling="no"></iframe>
-      {/*<Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />*/}
+      <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
     </Layout>
   );
 };
